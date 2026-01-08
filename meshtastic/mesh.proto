@@ -1754,17 +1754,18 @@ message NodeInfo {
   bool is_ignored = 11;
 
   /*
-   * True if node has been muted
-   * Persistes between NodeDB internal clean ups
-   */ 
-  bool is_muted = 12;
-
-  /*
    * True if node public key has been verified.
    * Persists between NodeDB internal clean ups
    * LSB 0 of the bitfield
    */
-  bool is_key_manually_verified = 13;
+  bool is_key_manually_verified = 12;
+
+  /*
+   * True if node has been muted
+   * Persists between NodeDB internal clean ups
+   * LSB 1 of the bitfield
+   */ 
+  bool is_muted = 13;
 }
 
 /*
